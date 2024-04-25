@@ -1,0 +1,26 @@
+{
+  "name": "api-base-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.1.1",
+    "express": "^4.19.2",
+    "globals": "^15.0.0",
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "pg": "^8.11.5"
+  }
+}

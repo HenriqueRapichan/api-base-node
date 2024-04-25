@@ -1,0 +1,29 @@
+criar projeot em node 
+
+-> npm init -y
+-> npm install express nodemon --save-dev
+-> npm install eslint --save-dev                                                    //instalação
+-> npx eslint --init                                                                // criar eslint.json
+
+√ How would you like to use ESLint? · problems    
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · javascript
+√ Where does your code run? · browser, node
+The config that you've selected requires the following dependencies:
+
+eslint, globals, @eslint/js
+√ Would you like to install them now? · No / Yes
+√ Which package manager do you want to use? · npm
+
+-> npm install dotenv --save-dev
+-> npm install cors --save-dev
+
+-> npm install pg-promise --save-dev                // utilizado no middleware para capturar erros especificos do postgress
+
+no package.json
+"type": "module",
+
+"scripts": {
+  "start": "nodemon index.js"
+}

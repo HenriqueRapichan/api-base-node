@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de CORS</title>
+</head>
+<body>
+    <h1>Teste de CORS</h1>
+    <button onclick="testarCORS()">Testar CORS</button>
+    <script>
+        async function testarCORS() {
+            try {
+                const response = await fetch('http://localhost:3000/usuario', {
+                    method: 'GET',
+                    // Adicione quaisquer cabeçalhos necessários aqui
+                });
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error('Erro:', error);
+            }
+        }
+    </script>
+</body>
+</html>
