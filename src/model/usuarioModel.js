@@ -25,6 +25,19 @@ class UserModel {
       throw new Error('Erro ao buscar usuários: ' + error);
     }
   }
+
+  async getActiveUsersByType(login) {
+    try {
+      const result = await Conexao.query(
+        `SELECT * FROM usuarios WHERE login = $1`,
+        [login]
+      );
+      return result.rows;
+    } catch (error) {
+      throw new Error('Erro ao buscar usuários ativos por tipo: ' + error);
+    }
+  }
+
 }
 export default new UserModel();
 

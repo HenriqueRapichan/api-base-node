@@ -7,6 +7,7 @@ router.get("/status", (req, res) => {
 });
 
 router.get('/usuario', usuarioController.getUsers);
-router.get('/usuariosFiltro', usuarioController.getUsersFilter)
+router.get('/usuariosFiltro', usuarioController.getUsersFilter);
+router.get('/getActiveUsersByType', usuarioController.getActiveUsersByType);
 
 export default router;

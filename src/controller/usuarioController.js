@@ -24,6 +24,19 @@ class UserController {
       next(erro);
     }
   }
+  async getActiveUsersByType(req, res, next) {
+    try {
+      const param = req.body;
+      const users = await UserModel.getActiveUsersByType(param.login);
+      if (users.length > 0) {
+        res.status(200).json(users);
+      } else {
+        res.status(404).send({ message: "Usuário não localizado." });
+      }
+    } catch (erro) {
+      next(erro);
+    }
+  }
 }
 
 export default new UserController();
