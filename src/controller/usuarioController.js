@@ -15,6 +15,10 @@ class UserController {
     try {
       const param = req.body;
       const users = await UserModel.getUsersFilter(param.filter);
+      if (users === null || users === undefined) {
+        res.status(404).send({ message: "Nenhum usuário encontrado." });
+        return; // Retorna para evitar a execução do código abaixo
+      }
       if (users.length > 0) {
         res.status(200).json(users);
       } else {
